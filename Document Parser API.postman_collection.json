@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "4fac6c90-a97c-48d9-b873-ff845b1b0cd7",
+		"name": "Document Parser API",
+		"description": "Advanced OCR-based certificate and document parsing API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29515617"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Supported Formats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/supported-formats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"supported-formats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Test Parameters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/test-parameters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"test-parameters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OCR Only",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/ocr-text",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ocr-text"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Parse Single Document",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/parse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"parse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Parse Batch Documents",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/parse/batch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"parse",
+						"batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Export Data (JSON Example)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"John Doe\",\n  \"certificate\": \"ABC123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/export/json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"export",
+						"json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Export Data (CSV Example)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"John Doe\",\n  \"certificate\": \"ABC123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/export/csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"export",
+						"csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Export Data (Excel Example)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"John Doe\",\n  \"certificate\": \"ABC123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/export/excel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"export",
+						"excel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
